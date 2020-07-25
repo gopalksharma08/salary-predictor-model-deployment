@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Income Predictor</h2>
+            <h3>Age</h3>
+            <input id="first" name="Age" type="number ">
+            <h3>Working Hours Per Week</h3><br><input id="second" name="Hours" required="required">
+            <h3>What Is the Your Education</h3><br><select name="education_Doctorate" id="third" required="required">
+                <option value="Doctorate">Doctorate</option>
+                <option value="Masters">Masters</option>
+                <option value="Graduate">Graduate</option>
+                <option value="High School">High School</option>
+            </select>
+            <h3>Are you Married</h3><br><select name="marital_status_Not_married" id="research" required="required">
+                <option value=1>Yes</option>
+                <option value=0>No</option>
+            </select>
+            <h3>Gender</h3><br><select name="sex_Male" id="research" required="required">
+                <option value=1>Male</option>
+                <option value=0>Female</option>
+              </select>
+              <h3>Country</h3><br><select name="native_country_non_us" id="research" required="required">
+                  <option value="US">US</option>
+                  <option value="Non-US">Non-US</option>
+            </select>
+            <br><br><button id="sub" type="submit ">Predict</button>
+            <br>
+
+
+
+
+        </form>
+
+
+
+        <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+
+
+
+
+    <style>
+        body {
+            background-color: lightslategray;
+            text-align: center;
+            padding: 0px;
+        }
+
+        #research {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+
+        #edu {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+
+        #edu:hover {
+            background-color: coral;
+        }
+
+        #research {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+
+        #research:hover {
+            background-color: coral;
+        }
+
+        #resea {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+
+        #resea:hover {
+            background-color: coral;
+        }
+
+        #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+
+        #sub:hover {
+            background-color: darkcyan;
+        }
+
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</body>
+
+</html>
